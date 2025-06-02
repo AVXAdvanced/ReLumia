@@ -1,3 +1,10 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+⚠ This Repository isn't finished. Not all files are available yet. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 # 📱ReLumia
 The ultimate archive of emergency files, FFUs, tools, and resurrection utilities for Microsoft/Nokia Lumia devices.
 
@@ -43,6 +50,8 @@ USB & Qualcomm driver packages
 ## ✅ Supported Devices
 Most Lumias from Windows Phone 8 and above are and will be supported. 
 Note: Some rare carrier-specific models may still be missing. Contributions are welcome.
+
+Here is a list of all Supported Phones:
 
 RM-820,
 RM-821,
@@ -139,33 +148,44 @@ RM-1150,
 RM-1152,
 RM-1154,
 
-## 🛠 Usage Guide
-🧠 TL;DR: Flash FFUs with WDRT or Thor2. Use emergency files if you're hard-bricked.
+## ⚡ Flashing
 
-Identify your device
-Look at the label under the SIM tray or use thor2 -mode rnd -readdevicerndinfo if semi-alive.
+We recommend you use either:
 
-Install drivers & tools
-Run the included WDRT or manually install the Lumia USB drivers.
+Windows Phone Internals (WPI): https://github.com/ReneLergner/WPinternals
+thor2 (Available thru WDRT, Open a Terminal in the WDRT Install Folder)
 
-### Flash using Thor2 (advanced)
+to flash FFUs onto your phone. For most cases, use WPI, as thor2 is harder to operate.
+You'll need thor2 to unbrick your Lumia if it is in this state.
 
-css
-Copy
-Edit
-thor2 -mode uefiflash -ffufile [your.ffu] -deviceplatformid [ID]
-Use emergency files if bricked
-Put your Lumia in Emergency Download Mode (EDL) and use the .hex or .mbn files with QFIL or Thor2.
+### Flash an FFU File (using WPI)
+
+1) Connect your Lumia to your PC via a USB Cable
+   
+ ⚠️CAUTION: VERIFY YOUR CONNECTION IS STABLE AND YOUR LUMIA IS CHARGED BEFORE FLASHING⚠️
+
+3) Open WPI - If it won't open, unplug your Lumia, open it, and plug your Lumia back in.
+4) Click on "Flash" in the sidebar.
+5) Scroll down to "Flash original FFU"
+6) Select your newly downloaded FFU File
+7) Click "Flash FFU image"
+
+Wait for the process to complete. Your Phone will reboot automatically if the Flash has succeeded.
+
+⚠️DO NOT UNPLUG YOUR DEVICE UNDER ANY CIRCUMSTANCES! IT WILL GET BRICKED!⚠️
 
 ## 📥 Downloads
-Most files are too large for GitHub itself. Check the Releases tab or our external mirror for downloads.
+
+Since many files are too large to host on GitHub they are uploaded to Internet Archive.
+If a Phone's File(s) is/are too big, there will be an Internet Link File in their place.
+Download it and double-click it - it will lead you to Internet Archive!
 
 ## 🧠 FAQ
 Q: My phone isn't detected by WDRT. Now what?
 A: Use the emergency files to revive it into a flashable state.
 
 Q: Can I downgrade to Windows Phone 8.1?
-A: On most models, yes — as long as Secure Boot and UEFI allow it.
+A: If your Phone originally shipped with WP8.1, and it can run it, yes. Simply flash a WP8.1 FFU.
 
 Q: Is this legal?
 A: Firmware images are provided for archival and recovery purposes. You're responsible for how you use them.
